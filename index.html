@@ -9,10 +9,19 @@
   </style>
 </head>
 <body>
+  <button id="reset">Reset</button>
   <tile-planner></tile-planner>
 
   <script type="module">
     import './tile-planner.js';
+  </script>
+  <script>
+    function dqs(sel) { return document.querySelector(sel);}
+    const tp = dqs('tile-planner');
+    dqs('#reset').addEventListener('click', (e) => {
+      window.localStorage.removeItem('tile-planner-grid');
+      window.location.reload();
+    })
   </script>
 </body>
 </html>
