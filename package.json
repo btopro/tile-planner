@@ -14,7 +14,7 @@
     "build": "rimraf dist && rollup -c rollup.config.js"
   },
   "dependencies": {
-    "lit": "^2.0.2"
+    "lit": "^2.2.3"
   },
   "devDependencies": {
     "rollup-plugin-copy": "3.4.0",
