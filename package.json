@@ -10,12 +10,22 @@
     "analyze": "cem analyze --litelement",
     "start": "web-dev-server",
     "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
-    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore"
+    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "build": "rimraf dist && rollup -c rollup.config.js"
   },
   "dependencies": {
     "lit": "^2.0.2"
   },
   "devDependencies": {
+    "rollup-plugin-copy": "3.4.0",
+    "@babel/preset-env": "^7.16.4",
+    "@open-wc/building-rollup": "^2.0.1",
+    "@open-wc/testing": "next",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@web/dev-server-storybook": "next",
+    "@web/rollup-plugin-html": "^1.10.1",
+    "@web/rollup-plugin-import-meta-assets": "^1.0.7",
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/eslint-config": "^4.3.0",
     "@web/dev-server": "^0.1.28",
