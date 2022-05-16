@@ -136,7 +136,7 @@ export class TilePlanner extends LitElement {
       data-row="${index1}"
       data-col="${index2}" 
       @mouseover="${this.setColor}" 
-      @click="${this.setColorClick}" 
+      @click="${this.setColorClick}"
       data-color="${this.grid[index1][index2]}"></div>`)}
     </div>`)}
     `;
