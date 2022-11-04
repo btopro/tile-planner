@@ -10,15 +10,22 @@ export class TilePlanner extends LitElement {
       .row {
         padding: 0;
         margin: 0;
-        height: 10px;
+        height: 20px;
         justify-content: normal;
         display: flex;
+      }
+      .row::before {
+        content: attr(data-row);
+        margin-left: -20px;
+        font-size: 14px;
+        font-weight: bold;
+        position: absolute;
       }
       .cell {
         padding: 0;
         margin: 0;
-        height: 10px;
-        width: 10px;
+        height: 20px;
+        width: 20px;
         border: 1px solid grey;
         display: inline-flex;
         background-color: grey;
@@ -37,7 +44,7 @@ export class TilePlanner extends LitElement {
       }
       .btn {
         font-size: 8px;
-        height: 10px;
+        height: 20px;
         border: 0;
         margin: 0;
         padding: 0;
@@ -45,8 +52,15 @@ export class TilePlanner extends LitElement {
       }
       .btn.cols {
         height: 50px;
-        width: 12px;
+        width: 22px;
         overflow: hidden;
+      }
+      .btn.cols::before {
+        content: attr(data-col);
+        margin-top: -40px;
+        font-size: 14px;
+        font-weight: bold;
+        position: absolute;
       }
       .btn:hover {
         background-color: yellow;
